@@ -110,6 +110,25 @@ const options = {
             },
           },
         },
+        NewsArticle: {
+          type: "object",
+          properties: {
+            title: { type: "string", example: "Hamilton wins Monaco Grand Prix" },
+            description: { type: "string", example: "Lewis Hamilton secured his first win of the season..." },
+            content: { type: "string" },
+            url: { type: "string", example: "https://example.com/article" },
+            urlToImage: { type: "string", example: "https://example.com/image.jpg" },
+            publishedAt: { type: "string", example: "2026-06-25T10:00:00Z" },
+            source: {
+              type: "object",
+              properties: {
+                id: { type: "string", example: "bbc-sport" },
+                name: { type: "string", example: "BBC Sport" },
+              },
+            },
+            author: { type: "string", example: "John Doe" },
+          },
+        },
         Error: {
           type: "object",
           properties: {

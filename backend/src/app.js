@@ -5,6 +5,7 @@ const swaggerSpec = require("./config/swagger");
 const driversRouter = require("./routes/drivers");
 const racesRouter = require("./routes/races");
 const standingsRouter = require("./routes/standings");
+const newsRouter = require("./routes/news");
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.get("/health", (req, res) => {
 app.use("/api/drivers", driversRouter);
 app.use("/api/races", racesRouter);
 app.use("/api/standings", standingsRouter);
+app.use("/api/news", newsRouter);
 
 // Swagger UI
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
